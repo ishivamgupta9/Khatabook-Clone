@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "500693389056",
+    "project_id": "khatabook-clone-8cdae",
+    "storage_bucket": "khatabook-clone-8cdae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500693389056:android:a216fc26b8a38613c42de5",
+        "android_client_info": {
+          "package_name": "com.example.khaatabook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500693389056-b56ki36s0g0ofld3mlrre8qv729d01t7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvQEe164H-YKU0PDycGVJg6k31aqipBqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500693389056-b56ki36s0g0ofld3mlrre8qv729d01t7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

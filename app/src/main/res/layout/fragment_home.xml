@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+
+
+    <TableLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+
+        />
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:padding="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1.5"
+
+            android:src="@drawable/ic_baseline_library_books_24">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="My Bussiness">
+
+        </TextView>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tablayout">
+
+
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/blue"/>
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/card"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:padding="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+
+            android:weightSum="1.0"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/yougive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="रु 0"
+                android:gravity="center"
+
+                android:layout_weight="0.5"
+                android:textSize="25sp"
+                android:textColor="@color/blue"
+                ></TextView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:text="रु 0"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/blue"
+                ></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_below="@id/l1"
+            android:layout_width="match_parent"
+
+            android:weightSum="1.0"
+
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="You will give"
+                android:gravity="center"
+
+                android:layout_weight="0.5"
+
+                ></TextView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="You will get"
+
+                ></TextView>
+
+        </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/l2"
+                android:background="#bdbdbd"></View>
+
+
+            <TextView
+                android:id="@+id/viewreport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Report"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@color/blue"
+
+
+
+
+                android:layout_below="@id/line"/>
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/card"
+        android:id="@+id/search_customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <SearchView
+
+            android:padding="@dimen/_20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:iconifiedByDefault="false"
+            android:searchIcon="@null"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_below="@id/card"
+
+
+            android:queryHint="Search Customer"
+            android:paddingLeft="@dimen/_20dp"
+            android:background="@drawable/searchoutline"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclercustomer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_below="@id/search_customer"
+        tools:ignore="NotSibling" />
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/addcustomer"
+        android:layout_width="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_20dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_baseline_person_add_24"
+        android:text="ADD CUSTOMER"
+        android:drawablePadding="2dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="5dp"
+        android:layout_marginRight="10dp"
+      android:layout_marginBottom="10dp"
+        android:background="@drawable/addbutton"/>
+
+
+</RelativeLayout>

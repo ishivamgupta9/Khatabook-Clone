@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".messagepage">
+
+
+
+
+    <TableLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="5"
+            android:padding="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+               android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_baseline_account_circle_24"/>
+
+            <TextView
+
+                android:id="@+id/customername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Shivam"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="0.6"
+                android:textSize="16sp"/>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:src="@drawable/ic_baseline_local_phone_24"/>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:src="@drawable/ic_baseline_more_vert_24"/>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </TableLayout>
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:textColor="@color/black"
+    android:text="Add transaction"
+    android:id="@+id/space"
+    android:background="#e0e0e0"
+    android:paddingBottom="15dp"
+    android:drawablePadding="2dp"
+    android:gravity="center"
+
+    android:drawableBottom="@drawable/ic_baseline_arrow_downward_24"
+    android:layout_above="@id/bottom"
+
+    />
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yougave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="You Gave"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#f44336"/>
+
+
+        <Button
+
+            android:layout_margin="10dp"
+            android:id="@+id/yougot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#2e7d32"
+            android:text="You Got" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

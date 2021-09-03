@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rec"
+    android:layout_height="match_parent"
+    tools:context=".CalculateAmount">
+
+
+
+
+
+
+
+    <TableLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#eeeeee">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="2"
+            android:padding="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+
+
+                android:src="@drawable/leftarrow"/>
+
+
+            <TextView
+
+                android:id="@+id/titlecalculate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:layout_weight="0.6"
+                android:textSize="16sp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/amount1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:drawableStart="@drawable/rupee"
+        android:hint="Enter amount"
+        android:paddingStart="20dp"
+        android:drawablePadding="20dp"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:shadowColor="@color/white"
+
+        android:layout_below="@id/tablayout"
+        android:inputType="number" />
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/billdetails"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+
+
+        android:hint="Enter Details(Item Name,Bill No,Quantity..)"
+        android:textSize="13sp"
+        android:inputType="textLongMessage"
+
+
+
+        android:background="@color/white"
+        android:elevation="40dp"
+        android:shadowColor="@color/white"
+
+        android:layout_below="@id/amount1"
+    />
+
+
+
+    <TextView
+        android:id="@+id/selectdate"
+        android:layout_below="@id/billdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_margin="10dp"
+        android:layout_weight="0.5"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/rect_outlinegrey"
+        android:drawableRight="@drawable/spinner"
+        android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+        android:gravity="center"
+        android:text="Select Date" />
+
+    <TextView
+        android:id="@+id/attachbills"
+        android:layout_below="@id/billdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_weight="0.5"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/rect_outlinegrey"
+        android:drawableLeft="@drawable/ic_baseline_photo_camera_24"
+        android:gravity="center"
+        android:text="Attach bills" />
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:id="@+id/save1"
+        android:backgroundTint="@color/red"
+        android:layout_alignParentBottom="true"
+        android:text="SAVE"/>
+
+
+
+</RelativeLayout>

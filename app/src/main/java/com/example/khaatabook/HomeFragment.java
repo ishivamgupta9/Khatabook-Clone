@@ -12,6 +12,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.loader.content.CursorLoader;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Context;
 import android.content.ContentResolver;
 import android.provider.ContactsContract;
@@ -24,7 +27,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 import static android.content.ContentValues.TAG;
@@ -33,6 +40,9 @@ import static android.content.ContentValues.TAG;
 public class HomeFragment extends Fragment {
     private final int REQUEST_CODE=99;
     View v;
+    private RecyclerView myrecyclerview;//18
+    private List<UserHelperClass> lstchat;//19
+    RecyclerviewAdapter myadapter;
 
 
     static final int CONTACT_PERMISSION_CODE=1;
@@ -61,6 +71,34 @@ public class HomeFragment extends Fragment {
 
         add = v.findViewById(R.id.addcustomer);
         viewreport = v.findViewById(R.id.viewreport);
+
+
+
+
+        myrecyclerview=v.findViewById(R.id.recyclercustomer);//22
+
+        myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));//24
+
+
+
+
+
+
+        FirebaseRecyclerOptions<UserHelperClass> options
+                = new FirebaseRecyclerOptions.Builder<UserHelperClass>()
+                .setQuery(FirebaseDatabase.getInstance().getReference().child("Customer"), UserHelperClass.class)
+                .build();
+
+
+
+       myadapter=new RecyclerviewAdapter(options);
+       myrecyclerview.setAdapter(myadapter);
+
+
+
+
+
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,11 +161,26 @@ public class HomeFragment extends Fragment {
 
     }
 
+    public void onCreate( Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
 
 
 
 
+
+
+
+    } @Override
+    public void onStart() {
+        super.onStart();
+        myadapter.startListening();
+    }
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        myadapter.stopListening();
+//    }
 
 
     @Override
